@@ -1,4 +1,5 @@
 {
+    "ignorePatterns": ["dist", "webpack*.js"],
     "parser": "@typescript-eslint/parser",
     "plugins": ["@typescript-eslint", "prettier", "import"],
     "extends": [
