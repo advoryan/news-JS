@@ -10,10 +10,8 @@ class News {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement = getElement<HTMLTemplateElement>(document, '#newsItemTemp');
 
-        news.forEach((item: Article, idx: number): void => {
+        news.forEach((item: Article): void => {
             const newsClone: DocumentFragment = newsItemTemp.content.cloneNode(true) as DocumentFragment;
-
-            if (idx % 2) getElement(newsClone, '.news__item').classList.add('alt');
 
             getElement(newsClone, '.news__meta-photo').style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
