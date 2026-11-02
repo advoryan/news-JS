@@ -1,6 +1,15 @@
+:root {
+    --color-bg: #0f1115;
+    --color-surface: #1a1d24;
+    --color-border: #2b303b;
+    --color-text: #e6e8eb;
+    --color-text-muted: #9aa3b2;
+    --color-accent: #4ade80;
+}
+
 body {
-    color: #fff;
-    background: #17181c;
+    color: var(--color-text);
+    background: var(--color-bg);
     font-family: sans-serif;
 }
 
@@ -23,14 +32,14 @@ footer {
     font-size: 14px;
 }
 footer a {
-    color: #70d6ff;
+    color: var(--color-accent);
 }
 footer a:hover {
-    color: #69db7e;
+    color: var(--color-text);
 }
 footer .copyright {
     margin: 0;
-    color: #a2a2a2;
+    color: var(--color-text-muted);
 }
 footer .copyright:before {
     content: '©';

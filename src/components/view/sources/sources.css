@@ -11,28 +11,28 @@
 
 .source__item {
     background: none;
-    border: 2px solid #30c5ff;
+    border: 2px solid var(--color-border);
     font: inherit;
     line-height: 1;
     margin: 0.5em;
     padding: 1em 2em;
-    color: #70d6ff;
+    color: var(--color-text-muted);
     transition: 0.25s;
     cursor: pointer;
 }
 
 .source__item:hover,
 .source__item:focus {
-    border-color: #3fcc59;
-    color: #69db7e;
-    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--color-accent);
     transform: translateY(-0.25em);
 }
 
 .source__item.source__item_active {
-    border-color: #3fcc59;
-    background: #3fcc59;
-    color: #17181c;
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-bg);
 }
 
 .source__item-name {
