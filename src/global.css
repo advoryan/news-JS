@@ -41,3 +41,13 @@ footer .copyright:before {
     height: 40px;
     filter: invert(1);
 }
+
+@media (max-width: 639px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}

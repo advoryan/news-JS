@@ -9,6 +9,7 @@
     font-family: Arial, sans-serif;
     border-radius: 5px;
     overflow: hidden;
+    overflow-wrap: anywhere;
 }
 
 .news__item:hover .news__meta-photo {
@@ -119,6 +120,12 @@
 
 .news__item:hover .news__meta-details {
     left: 0%;
+}
+
+@media (max-width: 639px) {
+    .news__item .news__description h2 {
+        font-size: 1.3rem;
+    }
 }
 
 @media (min-width: 640px) {
