@@ -45,6 +45,11 @@ export enum StatusCode {
     NotFound = 404,
 }
 
+export enum ScrollDirection {
+    Left = -1,
+    Right = 1,
+}
+
 export interface Options {
     apiKey: string;
     sources: string;

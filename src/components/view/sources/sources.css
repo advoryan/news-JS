@@ -1,12 +1,46 @@
+.sources-slider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+}
+
+.sources-slider__arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.sources-slider__arrow:hover:not(:disabled) {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.sources-slider__arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
 .sources {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-height: 210px;
-    overflow: auto;
+    flex-grow: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
     align-items: center;
+    padding: 0.5em 0;
     font: 300 1em 'Fira Sans', sans-serif;
+}
+
+.sources::-webkit-scrollbar {
+    display: none;
 }
 
 .source__item {
