@@ -13,10 +13,10 @@ class App {
     }
 
     public start(): void {
-        getElement(document, '.sources').addEventListener('click', (e: Event) =>
-            this.controller.getNews(e, (data: NewsResponse) => this.view.drawNews(data))
+        getElement(document, '.sources').addEventListener('click', (e: Event): void =>
+            this.controller.getNews(e, (data: NewsResponse): void => this.view.drawNews(data))
         );
-        this.controller.getSources((data: SourcesResponse) => this.view.drawSources(data));
+        this.controller.getSources((data: SourcesResponse): void => this.view.drawSources(data));
     }
 }
 

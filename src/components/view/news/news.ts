@@ -4,13 +4,14 @@ import getElement from '../../../utils/getElement';
 
 class News {
     public draw(data: readonly Article[]): void {
-        const news: readonly Article[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
+        const news: readonly Article[] =
+            data.length >= 10 ? data.filter((_item: Article, idx: number): boolean => idx < 10) : data;
 
         const fragment: DocumentFragment = document.createDocumentFragment();
-        const newsItemTemp = getElement<HTMLTemplateElement>(document, '#newsItemTemp');
+        const newsItemTemp: HTMLTemplateElement = getElement<HTMLTemplateElement>(document, '#newsItemTemp');
 
-        news.forEach((item: Article, idx: number) => {
-            const newsClone = newsItemTemp.content.cloneNode(true) as DocumentFragment;
+        news.forEach((item: Article, idx: number): void => {
+            const newsClone: DocumentFragment = newsItemTemp.content.cloneNode(true) as DocumentFragment;
 
             if (idx % 2) getElement(newsClone, '.news__item').classList.add('alt');
 
