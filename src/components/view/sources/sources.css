@@ -29,6 +29,12 @@
     transform: translateY(-0.25em);
 }
 
+.source__item.source__item_active {
+    border-color: #3fcc59;
+    background: #3fcc59;
+    color: #17181c;
+}
+
 .source__item-name {
     font-weight: 400;
     white-space: nowrap;
