@@ -31,6 +31,13 @@ class News {
             fragment.append(newsClone);
         });
 
+        if (!news.length) {
+            const emptyMessage: HTMLParagraphElement = document.createElement('p');
+            emptyMessage.classList.add('news__empty');
+            emptyMessage.textContent = 'No news for this source';
+            fragment.append(emptyMessage);
+        }
+
         getElement(document, '.news').innerHTML = '';
         getElement(document, '.news').appendChild(fragment);
     }
